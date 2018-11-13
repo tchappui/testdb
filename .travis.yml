@@ -1,0 +1,29 @@
+language: python
+python:
+  - '3.7'
+
+# safelist
+branches:
+  only:
+    - dev
+
+
+before_script:
+  - pip install pipenv && pipenv install 
+
+services:
+  - postgresql
+
+addons:
+  postgresql: 10
+  apt:
+    packages:
+      - postgresql-10
+      - postgresql-client-10
+
+env: 
+  global:
+    - PGPORT=5433 DJANGO_SETTINGS_MODULE=testdb.settings.travis
+
+script:
+  - pipenv run python manage.py test
