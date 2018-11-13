@@ -13,6 +13,9 @@ before_script:
 services:
   - postgresql
 
+addons:
+  postgresql: "9.6"
+
 env: 
   - DJANGO_SETTINGS_MODULE=testdb.settings.travis
 
