@@ -14,7 +14,7 @@ services:
   - postgresql
 
 addons:
-  postgresql: "9.6"
+  postgresql: "10.6"
 
 env: 
   - DJANGO_SETTINGS_MODULE=testdb.settings.travis
