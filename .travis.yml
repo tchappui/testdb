@@ -7,7 +7,6 @@ branches:
   only:
     - dev
 
-
 before_script:
   - pip install pipenv && pipenv install 
 

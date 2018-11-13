@@ -11,3 +11,4 @@ class BlogModelTest(TestCase):
         article = self.create_article()
         self.assertTrue(isinstance(article, Article))
         self.assertEqual(str(article), article.title)
+        self.assertEqual(article.content, "yes, this is only a test")
